@@ -48,7 +48,7 @@ const Finance = () => {
   ];
 
   return (
-    <div className="p-4 space-y-8">
+    <div className="p-4 md:p-20 space-y-8">
       <h2 className="text-2xl font-semibold mb-4">Finance</h2>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {financePosts.map((post) => (

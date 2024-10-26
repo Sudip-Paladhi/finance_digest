@@ -1,33 +1,32 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./app/store";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Finance from "./components/Finance";
-import Technology from "./components/Technology";
-import AboutUs from "./components/AboutUs";
-import LoginButton from "./components/LoginButton";
-import PostDetails from "./components/PostDetails";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Finance from './components/Finance';
+import Technology from './components/Technology';
+import AboutUs from './components/AboutUs';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import PostDetails from './components/PostDetails';
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Router>
+    <Router>
+      <div>
         <Navbar />
-        <div className="container mx-auto p-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/finance" element={<Finance />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/login" element={<LoginButton />} />
-            <Route path="/post/:id" element={<PostDetails />} />
-          </Routes>
-        </div>
-      </Router>
-    </Provider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/finance" element={<Finance />} />
+          <Route path="/technology" element={<Technology />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/post/:id" element={<PostDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
 export default App;
+

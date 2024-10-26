@@ -93,7 +93,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="md:p-14 p-4 space-y-8">
+    <div className="md:p-20 p-4 space-y-8">
       {/* Finance Section */}
       <section>
         <h3 className="text-2xl font-semibold mb-4">Finance</h3>

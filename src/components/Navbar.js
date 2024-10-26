@@ -31,6 +31,7 @@ const Navbar = () => {
           <Link to="/login" className="text-white">
             Login
           </Link>
+          
         </div>
 
         <div className="md:hidden">
