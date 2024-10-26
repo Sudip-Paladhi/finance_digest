@@ -1,13 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './app/store'; // Create this file next
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Finance from './components/Finance';
-import Technology from './components/Technology';
-import AboutUs from './components/AboutUs';
-import LoginButton from './components/LoginButton';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./app/store";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Finance from "./components/Finance";
+import Technology from "./components/Technology";
+import AboutUs from "./components/AboutUs";
+import LoginButton from "./components/LoginButton";
+import PostDetails from "./components/PostDetails";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/technology" element={<Technology />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/login" element={<LoginButton />} />
+            <Route path="/post/:id" element={<PostDetails />} />
           </Routes>
         </div>
       </Router>
