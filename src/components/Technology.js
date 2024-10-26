@@ -48,9 +48,9 @@ const Technology = () => {
   ];
 
   return (
-    <div className="p-4 md:p-20 space-y-8">
+    <div className="p-6 md:p-20 space-y-8">
       <h2 className="text-2xl font-semibold mb-4">Technology</h2>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
         {technologyPosts.map((post) => (
           <Card key={post.id} {...post} />
         ))}
